@@ -121,24 +121,3 @@ python -m http.server 8000
 儲存後重新整理網頁，即可看到最新一期的日報！
 
 ---
-
-## 如何免費部署到 GitHub Pages？
-
-本專案完全由純靜態檔案構成，非常適合直接使用 **GitHub Pages** 免費架站：
-
-1. **建立 GitHub 儲存庫**：在 GitHub 上建立一個新的公開儲存庫（Repository），例如命名為 `fair-trade-daily`。
-2. **上傳程式碼**：將本專案所有檔案推送到該儲存庫的 `main` 分支。
-3. **開啟 GitHub Pages**：
-   - 進入儲存庫的 **Settings**（設定）頁籤。
-   - 在左側選單點選 **Pages**。
-   - 在 **Build and deployment** > **Branch** 區塊：
-     - 分支選擇：`main`
-     - 資料夾選擇：`/(root)`
-   - 點選 **Save** 儲存。
-4. **取得專屬網址**：等待 1～2 分鐘，頁面頂端就會出現專屬的網站連結（例如 `https://<你的帳號>.github.io/fair-trade-daily/`），所有人都可以自由點擊閱讀！
-
----
-
-## 授權條款
-
-本專案依 [MIT License](LICENSE) 授權條款開源發布。

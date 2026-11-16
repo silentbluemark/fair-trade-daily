@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公平交易法日報 | Fair Trade Law Daily</title>
+  <!-- Google Fonts: 標題使用 Noto Serif TC（襯線體），內文使用 Noto Sans TC（無襯線體） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 報刊外框容器 -->
+  <div class="newspaper-container">
+
+    <!-- 1. 報頭區 (Masthead) -->
+    <header class="masthead">
+      <div class="masthead-topbar">
+        <div class="masthead-meta">
+          <span class="meta-item"><strong>發行：</strong>公平交易法日報編輯小組</span>
+          <span class="meta-item"><strong>宗旨：</strong>維持市場交易秩序 · 確保事業公平競爭</span>
+        </div>
+        <div class="masthead-issue-picker">
+          <label for="issue-select"><strong>期數選擇：</strong></label>
+          <select id="issue-select" aria-label="選擇歷史期數">
+            <option value="">載入中...</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="masthead-main">
+        <h1 class="newspaper-title">公平交易法日報</h1>
+        <p class="newspaper-tagline">FAIR TRADE LAW DAILY · 競爭法最新實務與執法趨勢追蹤</p>
+      </div>
+
+      <div class="masthead-bottombar">
+        <div class="current-date-box">
+          <span id="current-date-text">載入日期中...</span>
+        </div>
+        <div class="newspaper-volume-tag">每日彙報 · 專業精選</div>
+      </div>
+    </header>
+
+    <!-- 2. 分類篩選導覽列 (Category Filters) -->
+    <nav class="category-nav" aria-label="文章分類篩選">
+      <div class="category-filters" id="category-filters">
+        <button type="button" class="filter-btn active" data-category="all">全部報導</button>
+        <button type="button" class="filter-btn" data-category="不實廣告">不實廣告</button>
+        <button type="button" class="filter-btn" data-category="結合申報">結合申報</button>
+        <button type="button" class="filter-btn" data-category="聯合行為">聯合行為</button>
+        <button type="button" class="filter-btn" data-category="國際動態">國際動態</button>
+      </div>
+    </nav>
+
+    <!-- 3. 主要內容版面（電腦雙欄 / 手機單欄） -->
+    <main class="newspaper-layout">
+
+      <!-- 左欄：本日頭條區 (Lead Story) -->
+      <section class="column-headline" id="headline-container" aria-label="本日頭條焦點">
+        <div class="column-header">
+          <h2 class="column-title">本日頭條焦點</h2>
+          <span class="column-subtitle">LEAD STORY</span>
+        </div>
+
+        <article class="headline-card" id="headline-card">
+          <div class="article-meta">
+            <span class="badge badge-category" id="headline-category">載入中...</span>
+            <span class="badge badge-law" id="headline-law">載入中...</span>
+            <span class="article-date" id="headline-date"></span>
+          </div>
+          <h3 class="headline-title" id="headline-title">正在載入頭條報導...</h3>
+          <p class="headline-summary" id="headline-summary">請稍候，系統正為您擷取最新一期公平交易法要聞。</p>
+          <div class="article-footer">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="read-more-link" id="headline-link">
+              閱讀機關原文報導 &rarr;
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- 右欄：重點快訊卡片區 (Brief News) -->
+      <section class="column-briefs" id="briefs-container" aria-label="重點快訊">
+        <div class="column-header">
+          <h2 class="column-title">重點快訊</h2>
+          <span class="column-subtitle">BRIEF REPORTS</span>
+        </div>
+
+        <div class="briefs-list" id="briefs-list">
+          <!-- 由 JavaScript 動態生成快訊卡片 -->
+          <p class="loading-hint">快訊資料載入中...</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 查無資料時的提示區塊 (預設隱藏) -->
+    <div class="empty-state" id="empty-state" style="display: none;">
+      <p>目前此分類尚無報導，請切換其他分類標籤查看。</p>
+    </div>
+
+    <!-- 4. 頁尾 (Footer) -->
+    <footer class="newspaper-footer">
+      <div class="footer-divider"></div>
+      <div class="footer-content">
+        <div class="footer-left">
+          <p class="footer-brand">公平交易法日報 Fair Trade Law Daily</p>
+          <p class="footer-disclaimer">本站內容彙整自公平交易委員會及國內外相關主管機關之公開資訊，僅供法令推廣與學術研討參考，實際法規適用請以主管機關正式處分書及公報為準。</p>
+        </div>
+        <div class="footer-right">
+          <ul class="footer-links">
+            <li><a href="https://www.ftc.gov.tw" target="_blank" rel="noopener noreferrer">公平交易委員會官網</a></li>
+            <li><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0150002" target="_blank" rel="noopener noreferrer">公平交易法規查詢</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 公平交易法日報 · 版權所有</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- 載入核心邏輯 JS -->
+  <script src="app.js"></script>
+</body>
+</html>

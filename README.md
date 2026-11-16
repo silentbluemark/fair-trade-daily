@@ -39,25 +39,6 @@ fair-trade-daily/
     └── 2026-11-17.json # 第 2 期報導資料
 ```
 
----
-
-## 本機預覽與測試
-
-由於現代瀏覽器的安全性限制（CORS 政策），直接按兩下開啟 `index.html`（`file:///` 協定）將無法讀取 `data/` 中的 JSON 檔案。建議使用以下任一種本機伺服器方式開啟：
-
-### 方法一：使用 VS Code Live Server（最推薦）
-1. 使用 VS Code 開啟本專案資料夾。
-2. 在 VS Code 的延伸模組（Extensions）中搜尋並安裝 **Live Server**。
-3. 在 `index.html` 檔案上按滑鼠右鍵，選擇 **「Open with Live Server」** 即可。
-
-### 方法二：使用 Python 內建伺服器
-若電腦已安裝 Python，可於專案根目錄開啟終端機執行：
-```bash
-python -m http.server 8000
-```
-接著於瀏覽器網址列輸入 `http://localhost:8000` 即可預覽。
-
----
 
 ## 如何發布新一期日報？
 
